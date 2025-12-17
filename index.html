@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Space Viewer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>NASA Space Viewer</h1>
+        <p>Explore NASA's Astronomy Picture of the Day</p>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <label for="date-picker">Choose a Date:</label>
+            <input type="date" id="date-picker">
+            <button id="search-btn">View Picture</button>
+            <button id="today-btn">Today's Picture</button>
+        </section>
+
+        <section class="content-section">
+            <div id="loading" class="hidden">
+                <p>Loading...</p>
+            </div>
+
+            <div id="error" class="hidden">
+                <p id="error-message"></p>
+            </div>
+
+            <div id="apod-container" class="hidden">
+                <h2 id="apod-title"></h2>
+                <p id="apod-date"></p>
+                <img id="apod-image" src="" alt="">
+                <p id="apod-explanation"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Data from NASA API</p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
